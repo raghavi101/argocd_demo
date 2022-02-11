@@ -11,4 +11,4 @@ spec:
     path: simpleapp
   destination:
     server: https://kubernetes.default.svc
-    namespace: my-go-app-new
+    namespace: argocd
