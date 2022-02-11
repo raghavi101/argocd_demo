@@ -8,7 +8,7 @@ This is a demo repo to test argocd with a simple main.go application using [net/
 
 3. Create a namespace "argocd" 
 ```kubectl create namespace argocd```
-4. Refer to [argocd getting started](https://argo-cd.readthedocs.io/en/stable/getting_started/) doc for this step and get your argocd inststance up and running (use port 3000)
+4. Refer to [argocd getting started](https://argo-cd.readthedocs.io/en/stable/getting_started/) doc for this step and get your argocd inststance up and running.
 
 5. Apply the application object created for this deployment in argocd namespace ```kubectl apply -n argocd -f application.yaml ```
 
