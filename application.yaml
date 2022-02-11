@@ -1,8 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argocddemo
-  namespace: my-go-app-new
+  name: my-go-app-new
+  namespace: argocd
 spec:
   project: default
   source:
