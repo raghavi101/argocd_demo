@@ -17,3 +17,9 @@ This is a demo repo to test argocd with a simple main.go application using [net/
 7. Check your deployment on a different tab ```minikube service my-go-app-service --url``` 
 
 8. Done and Deployed! Now every change you make in your yaml files and apply it to git, argocd will sync your deployment.
+
+### The deployment (argocd UI & exposed service) will look like :
+
+![Screenshot](https://github.com/raghavi101/argocd_demo/blob/main/img/Argo-ui-check.png)
+
+![Screenshot2](https://github.com/raghavi101/argocd_demo/blob/main/img/Deployment-check.png)
