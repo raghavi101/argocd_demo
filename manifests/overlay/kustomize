@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kustomize-my-go-app-service
+spec:
+  ports:
+  - nodePort: 31000
+    port: 8080
+    protocol: TCP
+  selector:
+    app: my-go-app-new
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kustomize-my-go-app-new
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-go-app-new
+  template:
+    metadata:
+      labels:
+        app: my-go-app-new
+    spec:
+      containers:
+      - image: raghavi101/my-go-app-new:mytag
+        name: my-go-container-new
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            cpu: 500m
+            memory: 128Mi
