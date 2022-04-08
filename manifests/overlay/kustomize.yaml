@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: kustomize-my-go-app-service
+  name: my-go-app-service
 spec:
   ports:
-  - nodePort: 31000
+  - nodePort: 30000
     port: 8080
     protocol: TCP
   selector:
@@ -14,7 +14,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kustomize-my-go-app-new
+  name: my-go-app-new
 spec:
   replicas: 2
   selector:
