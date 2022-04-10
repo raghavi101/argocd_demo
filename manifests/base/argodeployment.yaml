@@ -1,3 +1,4 @@
+# This is an auto-generated file. DO NOT EDIT
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -8780,7 +8781,7 @@ metadata:
     app.kubernetes.io/component: application-controller
     app.kubernetes.io/name: argocd-application-controller
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-application-controller
+  name: argocd-application-controller
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -8789,7 +8790,7 @@ metadata:
     app.kubernetes.io/component: controller
     app.kubernetes.io/name: argocd-applicationset-controller
     app.kubernetes.io/part-of: argocd-applicationset
-  name: kustomize-argocd-applicationset-controller
+  name: argocd-applicationset-controller
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -8798,12 +8799,12 @@ metadata:
     app.kubernetes.io/component: dex-server
     app.kubernetes.io/name: argocd-dex-server
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-dex-server
+  name: argocd-dex-server
 ---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: kustomize-argocd-notifications-controller
+  name: argocd-notifications-controller
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -8812,7 +8813,7 @@ metadata:
     app.kubernetes.io/component: redis
     app.kubernetes.io/name: argocd-redis
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-redis
+  name: argocd-redis
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -8821,7 +8822,7 @@ metadata:
     app.kubernetes.io/component: server
     app.kubernetes.io/name: argocd-server
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-server
+  name: argocd-server
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
@@ -8830,7 +8831,7 @@ metadata:
     app.kubernetes.io/component: application-controller
     app.kubernetes.io/name: argocd-application-controller
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-application-controller
+  name: argocd-application-controller
 rules:
 - apiGroups:
   - ""
@@ -8869,7 +8870,7 @@ metadata:
     app.kubernetes.io/component: controller
     app.kubernetes.io/name: argocd-applicationset-controller
     app.kubernetes.io/part-of: argocd-applicationset
-  name: kustomize-argocd-applicationset-controller
+  name: argocd-applicationset-controller
 rules:
 - apiGroups:
   - argoproj.io
@@ -8930,7 +8931,7 @@ metadata:
     app.kubernetes.io/component: dex-server
     app.kubernetes.io/name: argocd-dex-server
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-dex-server
+  name: argocd-dex-server
 rules:
 - apiGroups:
   - ""
@@ -8945,7 +8946,7 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  name: kustomize-argocd-notifications-controller
+  name: argocd-notifications-controller
 rules:
 - apiGroups:
   - argoproj.io
@@ -8969,7 +8970,7 @@ rules:
 - apiGroups:
   - ""
   resourceNames:
-  - kustomize-argocd-notifications-cm
+  - argocd-notifications-cm
   resources:
   - configmaps
   verbs:
@@ -8977,7 +8978,7 @@ rules:
 - apiGroups:
   - ""
   resourceNames:
-  - kustomize-argocd-notifications-secret
+  - argocd-notifications-secret
   resources:
   - secrets
   verbs:
@@ -8990,7 +8991,7 @@ metadata:
     app.kubernetes.io/component: server
     app.kubernetes.io/name: argocd-server
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-server
+  name: argocd-server
 rules:
 - apiGroups:
   - ""
@@ -9033,7 +9034,7 @@ metadata:
     app.kubernetes.io/component: application-controller
     app.kubernetes.io/name: argocd-application-controller
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-application-controller
+  name: argocd-application-controller
 rules:
 - apiGroups:
   - '*'
@@ -9053,7 +9054,7 @@ metadata:
     app.kubernetes.io/component: server
     app.kubernetes.io/name: argocd-server
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-server
+  name: argocd-server
 rules:
 - apiGroups:
   - '*'
@@ -9084,14 +9085,14 @@ metadata:
     app.kubernetes.io/component: application-controller
     app.kubernetes.io/name: argocd-application-controller
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-application-controller
+  name: argocd-application-controller
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
-  name: kustomize-argocd-application-controller
+  name: argocd-application-controller
 subjects:
 - kind: ServiceAccount
-  name: kustomize-argocd-application-controller
+  name: argocd-application-controller
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -9100,14 +9101,14 @@ metadata:
     app.kubernetes.io/component: controller
     app.kubernetes.io/name: argocd-applicationset-controller
     app.kubernetes.io/part-of: argocd-applicationset
-  name: kustomize-argocd-applicationset-controller
+  name: argocd-applicationset-controller
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
-  name: kustomize-argocd-applicationset-controller
+  name: argocd-applicationset-controller
 subjects:
 - kind: ServiceAccount
-  name: kustomize-argocd-applicationset-controller
+  name: argocd-applicationset-controller
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -9116,26 +9117,26 @@ metadata:
     app.kubernetes.io/component: dex-server
     app.kubernetes.io/name: argocd-dex-server
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-dex-server
+  name: argocd-dex-server
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
-  name: kustomize-argocd-dex-server
+  name: argocd-dex-server
 subjects:
 - kind: ServiceAccount
-  name: kustomize-argocd-dex-server
+  name: argocd-dex-server
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: kustomize-argocd-notifications-controller
+  name: argocd-notifications-controller
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
-  name: kustomize-argocd-notifications-controller
+  name: argocd-notifications-controller
 subjects:
 - kind: ServiceAccount
-  name: kustomize-argocd-notifications-controller
+  name: argocd-notifications-controller
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -9144,14 +9145,14 @@ metadata:
     app.kubernetes.io/component: redis
     app.kubernetes.io/name: argocd-redis
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-redis
+  name: argocd-redis
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
   name: argocd-redis
 subjects:
 - kind: ServiceAccount
-  name: kustomize-argocd-redis
+  name: argocd-redis
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -9160,14 +9161,14 @@ metadata:
     app.kubernetes.io/component: server
     app.kubernetes.io/name: argocd-server
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-server
+  name: argocd-server
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
-  name: kustomize-argocd-server
+  name: argocd-server
 subjects:
 - kind: ServiceAccount
-  name: kustomize-argocd-server
+  name: argocd-server
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -9176,11 +9177,11 @@ metadata:
     app.kubernetes.io/component: application-controller
     app.kubernetes.io/name: argocd-application-controller
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-application-controller
+  name: argocd-application-controller
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: kustomize-argocd-application-controller
+  name: argocd-application-controller
 subjects:
 - kind: ServiceAccount
   name: argocd-application-controller
@@ -9193,11 +9194,11 @@ metadata:
     app.kubernetes.io/component: server
     app.kubernetes.io/name: argocd-server
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-server
+  name: argocd-server
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: kustomize-argocd-server
+  name: argocd-server
 subjects:
 - kind: ServiceAccount
   name: argocd-server
@@ -9209,7 +9210,7 @@ metadata:
   labels:
     app.kubernetes.io/name: argocd-cm
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-cm
+  name: argocd-cm
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -9217,7 +9218,7 @@ metadata:
   labels:
     app.kubernetes.io/name: argocd-cmd-params-cm
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-cmd-params-cm
+  name: argocd-cmd-params-cm
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -9225,12 +9226,12 @@ metadata:
   labels:
     app.kubernetes.io/name: argocd-gpg-keys-cm
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-gpg-keys-cm
+  name: argocd-gpg-keys-cm
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: kustomize-argocd-notifications-cm
+  name: argocd-notifications-cm
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -9238,7 +9239,7 @@ metadata:
   labels:
     app.kubernetes.io/name: argocd-rbac-cm
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-rbac-cm
+  name: argocd-rbac-cm
 ---
 apiVersion: v1
 data:
@@ -9257,7 +9258,7 @@ metadata:
   labels:
     app.kubernetes.io/name: argocd-ssh-known-hosts-cm
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-ssh-known-hosts-cm
+  name: argocd-ssh-known-hosts-cm
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -9265,12 +9266,12 @@ metadata:
   labels:
     app.kubernetes.io/name: argocd-tls-certs-cm
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-tls-certs-cm
+  name: argocd-tls-certs-cm
 ---
 apiVersion: v1
 kind: Secret
 metadata:
-  name: kustomize-argocd-notifications-secret
+  name: argocd-notifications-secret
 type: Opaque
 ---
 apiVersion: v1
@@ -9279,7 +9280,7 @@ metadata:
   labels:
     app.kubernetes.io/name: argocd-secret
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-secret
+  name: argocd-secret
 type: Opaque
 ---
 apiVersion: v1
@@ -9289,7 +9290,7 @@ metadata:
     app.kubernetes.io/component: controller
     app.kubernetes.io/name: argocd-applicationset-controller
     app.kubernetes.io/part-of: argocd-applicationset
-  name: kustomize-argocd-applicationset-controller
+  name: argocd-applicationset-controller
 spec:
   ports:
   - name: webhook
@@ -9310,7 +9311,7 @@ metadata:
     app.kubernetes.io/component: dex-server
     app.kubernetes.io/name: argocd-dex-server
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-dex-server
+  name: argocd-dex-server
 spec:
   ports:
   - name: http
@@ -9335,7 +9336,7 @@ metadata:
     app.kubernetes.io/component: metrics
     app.kubernetes.io/name: argocd-metrics
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-metrics
+  name: argocd-metrics
 spec:
   ports:
   - name: metrics
@@ -9350,7 +9351,7 @@ kind: Service
 metadata:
   labels:
     app.kubernetes.io/name: argocd-notifications-controller-metrics
-  name: kustomize-argocd-notifications-controller-metrics
+  name: argocd-notifications-controller-metrics
 spec:
   ports:
   - name: metrics
@@ -9367,7 +9368,7 @@ metadata:
     app.kubernetes.io/component: redis
     app.kubernetes.io/name: argocd-redis
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-redis
+  name: argocd-redis
 spec:
   ports:
   - name: tcp-redis
@@ -9383,7 +9384,7 @@ metadata:
     app.kubernetes.io/component: repo-server
     app.kubernetes.io/name: argocd-repo-server
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-repo-server
+  name: argocd-repo-server
 spec:
   ports:
   - name: server
@@ -9404,7 +9405,7 @@ metadata:
     app.kubernetes.io/component: server
     app.kubernetes.io/name: argocd-server
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-server
+  name: argocd-server
 spec:
   ports:
   - name: http
@@ -9425,7 +9426,7 @@ metadata:
     app.kubernetes.io/component: server
     app.kubernetes.io/name: argocd-server-metrics
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-server-metrics
+  name: argocd-server-metrics
 spec:
   ports:
   - name: metrics
@@ -9442,7 +9443,7 @@ metadata:
     app.kubernetes.io/component: controller
     app.kubernetes.io/name: argocd-applicationset-controller
     app.kubernetes.io/part-of: argocd-applicationset
-  name: kustomize-argocd-applicationset-controller
+  name: argocd-applicationset-controller
 spec:
   selector:
     matchLabels:
@@ -9478,16 +9479,16 @@ spec:
           name: gpg-keys
         - mountPath: /app/config/gpg/keys
           name: gpg-keyring
-      serviceAccountName: kustomize-argocd-applicationset-controller
+      serviceAccountName: argocd-applicationset-controller
       volumes:
       - configMap:
-          name: kustomize-argocd-ssh-known-hosts-cm
+          name: argocd-ssh-known-hosts-cm
         name: ssh-known-hosts
       - configMap:
-          name: kustomize-argocd-tls-certs-cm
+          name: argocd-tls-certs-cm
         name: tls-certs
       - configMap:
-          name: kustomize-argocd-gpg-keys-cm
+          name: argocd-gpg-keys-cm
         name: gpg-keys
       - emptyDir: {}
         name: gpg-keyring
@@ -9499,7 +9500,7 @@ metadata:
     app.kubernetes.io/component: dex-server
     app.kubernetes.io/name: argocd-dex-server
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-dex-server
+  name: argocd-dex-server
 spec:
   selector:
     matchLabels:
@@ -9552,7 +9553,7 @@ spec:
           name: static-files
         - mountPath: /tmp
           name: dexconfig
-      serviceAccountName: kustomize-argocd-dex-server
+      serviceAccountName: argocd-dex-server
       volumes:
       - emptyDir: {}
         name: static-files
@@ -9562,7 +9563,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kustomize-argocd-notifications-controller
+  name: argocd-notifications-controller
 spec:
   selector:
     matchLabels:
@@ -9591,10 +9592,10 @@ spec:
         workingDir: /app
       securityContext:
         runAsNonRoot: true
-      serviceAccountName: kustomize-argocd-notifications-controller
+      serviceAccountName: argocd-notifications-controller
       volumes:
       - configMap:
-          name: kustomize-argocd-tls-certs-cm
+          name: argocd-tls-certs-cm
         name: tls-certs
       - name: argocd-repo-server-tls
         secret:
@@ -9615,7 +9616,7 @@ metadata:
     app.kubernetes.io/component: redis
     app.kubernetes.io/name: argocd-redis
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-redis
+  name: argocd-redis
 spec:
   selector:
     matchLabels:
@@ -9654,7 +9655,7 @@ spec:
       securityContext:
         runAsNonRoot: true
         runAsUser: 999
-      serviceAccountName: kustomize-argocd-redis
+      serviceAccountName: argocd-redis
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -9663,7 +9664,7 @@ metadata:
     app.kubernetes.io/component: repo-server
     app.kubernetes.io/name: argocd-repo-server
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-repo-server
+  name: argocd-repo-server
 spec:
   selector:
     matchLabels:
@@ -9700,73 +9701,73 @@ spec:
           valueFrom:
             configMapKeyRef:
               key: timeout.reconciliation
-              name: kustomize-argocd-cm
+              name: argocd-cm
               optional: true
         - name: ARGOCD_REPO_SERVER_LOGFORMAT
           valueFrom:
             configMapKeyRef:
               key: reposerver.log.format
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_REPO_SERVER_LOGLEVEL
           valueFrom:
             configMapKeyRef:
               key: reposerver.log.level
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_REPO_SERVER_PARALLELISM_LIMIT
           valueFrom:
             configMapKeyRef:
               key: reposerver.parallelism.limit
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_REPO_SERVER_DISABLE_TLS
           valueFrom:
             configMapKeyRef:
               key: reposerver.disable.tls
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_TLS_MIN_VERSION
           valueFrom:
             configMapKeyRef:
               key: reposerver.tls.minversion
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_TLS_MAX_VERSION
           valueFrom:
             configMapKeyRef:
               key: reposerver.tls.maxversion
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_TLS_CIPHERS
           valueFrom:
             configMapKeyRef:
               key: reposerver.tls.ciphers
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_REPO_CACHE_EXPIRATION
           valueFrom:
             configMapKeyRef:
               key: reposerver.repo.cache.expiration
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: REDIS_SERVER
           valueFrom:
             configMapKeyRef:
               key: redis.server
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: REDISDB
           valueFrom:
             configMapKeyRef:
               key: redis.db
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_DEFAULT_CACHE_EXPIRATION
           valueFrom:
             configMapKeyRef:
               key: reposerver.default.cache.expiration
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: HELM_CACHE_HOME
           value: /helm-working-dir
@@ -9830,13 +9831,13 @@ spec:
           name: var-files
       volumes:
       - configMap:
-          name: kustomize-argocd-ssh-known-hosts-cm
+          name: argocd-ssh-known-hosts-cm
         name: ssh-known-hosts
       - configMap:
-          name: kustomize-argocd-tls-certs-cm
+          name: argocd-tls-certs-cm
         name: tls-certs
       - configMap:
-          name: kustomize-argocd-gpg-keys-cm
+          name: argocd-gpg-keys-cm
         name: gpg-keys
       - emptyDir: {}
         name: gpg-keyring
@@ -9867,7 +9868,7 @@ metadata:
     app.kubernetes.io/component: server
     app.kubernetes.io/name: argocd-server
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-server
+  name: argocd-server
 spec:
   selector:
     matchLabels:
@@ -9900,157 +9901,157 @@ spec:
           valueFrom:
             configMapKeyRef:
               key: server.insecure
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_SERVER_BASEHREF
           valueFrom:
             configMapKeyRef:
               key: server.basehref
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_SERVER_ROOTPATH
           valueFrom:
             configMapKeyRef:
               key: server.rootpath
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_SERVER_LOGFORMAT
           valueFrom:
             configMapKeyRef:
               key: server.log.format
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_REPO_SERVER_LOGLEVEL
           valueFrom:
             configMapKeyRef:
               key: server.log.level
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_SERVER_REPO_SERVER
           valueFrom:
             configMapKeyRef:
               key: repo.server
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_SERVER_DEX_SERVER
           valueFrom:
             configMapKeyRef:
               key: server.dex.server
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_SERVER_DISABLE_AUTH
           valueFrom:
             configMapKeyRef:
               key: server.disable.auth
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_SERVER_ENABLE_GZIP
           valueFrom:
             configMapKeyRef:
               key: server.enable.gzip
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_SERVER_REPO_SERVER_TIMEOUT_SECONDS
           valueFrom:
             configMapKeyRef:
               key: server.repo.server.timeout.seconds
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_SERVER_X_FRAME_OPTIONS
           valueFrom:
             configMapKeyRef:
               key: server.x.frame.options
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_SERVER_CONTENT_SECURITY_POLICY
           valueFrom:
             configMapKeyRef:
               key: server.content.security.policy
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_SERVER_REPO_SERVER_PLAINTEXT
           valueFrom:
             configMapKeyRef:
               key: server.repo.server.plaintext
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_SERVER_REPO_SERVER_STRICT_TLS
           valueFrom:
             configMapKeyRef:
               key: server.repo.server.strict.tls
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_TLS_MIN_VERSION
           valueFrom:
             configMapKeyRef:
               key: server.tls.minversion
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_TLS_MAX_VERSION
           valueFrom:
             configMapKeyRef:
               key: server.tls.maxversion
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_TLS_CIPHERS
           valueFrom:
             configMapKeyRef:
               key: server.tls.ciphers
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_SERVER_CONNECTION_STATUS_CACHE_EXPIRATION
           valueFrom:
             configMapKeyRef:
               key: server.connection.status.cache.expiration
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_SERVER_OIDC_CACHE_EXPIRATION
           valueFrom:
             configMapKeyRef:
               key: server.oidc.cache.expiration
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_SERVER_LOGIN_ATTEMPTS_EXPIRATION
           valueFrom:
             configMapKeyRef:
               key: server.login.attempts.expiration
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_SERVER_STATIC_ASSETS
           valueFrom:
             configMapKeyRef:
               key: server.staticassets
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_APP_STATE_CACHE_EXPIRATION
           valueFrom:
             configMapKeyRef:
               key: server.app.state.cache.expiration
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: REDIS_SERVER
           valueFrom:
             configMapKeyRef:
               key: redis.server
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: REDISDB
           valueFrom:
             configMapKeyRef:
               key: redis.db
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_DEFAULT_CACHE_EXPIRATION
           valueFrom:
             configMapKeyRef:
               key: server.default.cache.expiration
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_MAX_COOKIE_NUMBER
           valueFrom:
             configMapKeyRef:
               key: server.http.cookie.maxnumber
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         image: quay.io/argoproj/argocd:latest
         imagePullPolicy: Always
@@ -10088,7 +10089,7 @@ spec:
           name: plugins-home
         - mountPath: /tmp
           name: tmp
-      serviceAccountName: kustomize-argocd-server
+      serviceAccountName: argocd-server
       volumes:
       - emptyDir: {}
         name: plugins-home
@@ -10097,10 +10098,10 @@ spec:
       - emptyDir: {}
         name: static-files
       - configMap:
-          name: kustomize-argocd-ssh-known-hosts-cm
+          name: argocd-ssh-known-hosts-cm
         name: ssh-known-hosts
       - configMap:
-          name: kustomize-argocd-tls-certs-cm
+          name: argocd-tls-certs-cm
         name: tls-certs
       - name: argocd-repo-server-tls
         secret:
@@ -10121,7 +10122,7 @@ metadata:
     app.kubernetes.io/component: application-controller
     app.kubernetes.io/name: argocd-application-controller
     app.kubernetes.io/part-of: argocd
-  name: kustomize-argocd-application-controller
+  name: argocd-application-controller
 spec:
   replicas: 1
   selector:
@@ -10158,97 +10159,97 @@ spec:
           valueFrom:
             configMapKeyRef:
               key: timeout.reconciliation
-              name: kustomize-argocd-cm
+              name: argocd-cm
               optional: true
         - name: ARGOCD_HARD_RECONCILIATION_TIMEOUT
           valueFrom:
             configMapKeyRef:
               key: timeout.hard.reconciliation
-              name: kustomize-argocd-cm
+              name: argocd-cm
               optional: true
         - name: ARGOCD_APPLICATION_CONTROLLER_REPO_SERVER
           valueFrom:
             configMapKeyRef:
               key: repo.server
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_APPLICATION_CONTROLLER_REPO_SERVER_TIMEOUT_SECONDS
           valueFrom:
             configMapKeyRef:
               key: controller.repo.server.timeout.seconds
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_APPLICATION_CONTROLLER_STATUS_PROCESSORS
           valueFrom:
             configMapKeyRef:
               key: controller.status.processors
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_APPLICATION_CONTROLLER_OPERATION_PROCESSORS
           valueFrom:
             configMapKeyRef:
               key: controller.operation.processors
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_APPLICATION_CONTROLLER_LOGFORMAT
           valueFrom:
             configMapKeyRef:
               key: controller.log.format
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_APPLICATION_CONTROLLER_LOGLEVEL
           valueFrom:
             configMapKeyRef:
               key: controller.log.level
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_APPLICATION_CONTROLLER_METRICS_CACHE_EXPIRATION
           valueFrom:
             configMapKeyRef:
               key: controller.metrics.cache.expiration
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_APPLICATION_CONTROLLER_SELF_HEAL_TIMEOUT_SECONDS
           valueFrom:
             configMapKeyRef:
               key: controller.self.heal.timeout.seconds
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_APPLICATION_CONTROLLER_REPO_SERVER_PLAINTEXT
           valueFrom:
             configMapKeyRef:
               key: controller.repo.server.plaintext
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_APPLICATION_CONTROLLER_REPO_SERVER_STRICT_TLS
           valueFrom:
             configMapKeyRef:
               key: controller.repo.server.strict.tls
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_APP_STATE_CACHE_EXPIRATION
           valueFrom:
             configMapKeyRef:
               key: controller.app.state.cache.expiration
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: REDIS_SERVER
           valueFrom:
             configMapKeyRef:
               key: redis.server
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: REDISDB
           valueFrom:
             configMapKeyRef:
               key: redis.db
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         - name: ARGOCD_DEFAULT_CACHE_EXPIRATION
           valueFrom:
             configMapKeyRef:
               key: controller.default.cache.expiration
-              name: kustomize-argocd-cmd-params-cm
+              name: argocd-cmd-params-cm
               optional: true
         image: quay.io/argoproj/argocd:latest
         imagePullPolicy: Always
@@ -10280,7 +10281,7 @@ spec:
         - mountPath: /home/argocd
           name: argocd-home
         workingDir: /home/argocd
-      serviceAccountName: kustomize-argocd-application-controller
+      serviceAccountName: argocd-application-controller
       volumes:
       - emptyDir: {}
         name: argocd-home
@@ -10299,7 +10300,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: kustomize-argocd-application-controller-network-policy
+  name: argocd-application-controller-network-policy
 spec:
   ingress:
   - from:
@@ -10315,7 +10316,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: kustomize-argocd-dex-server-network-policy
+  name: argocd-dex-server-network-policy
 spec:
   ingress:
   - from:
@@ -10341,7 +10342,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: kustomize-argocd-redis-network-policy
+  name: argocd-redis-network-policy
 spec:
   ingress:
   - from:
@@ -10366,7 +10367,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: kustomize-argocd-repo-server-network-policy
+  name: argocd-repo-server-network-policy
 spec:
   ingress:
   - from:
@@ -10395,7 +10396,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: kustomize-argocd-server-network-policy
+  name: argocd-server-network-policy
 spec:
   ingress:
   - {}
