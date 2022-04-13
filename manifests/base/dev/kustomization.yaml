@@ -4,4 +4,4 @@ kind: Kustomization
 namePrefix: kustomize1-
 
 resources:
-- argodeplyment.yaml
+- argodeployment.yaml
