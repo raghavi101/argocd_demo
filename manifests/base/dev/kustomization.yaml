@@ -5,3 +5,4 @@ namePrefix: kustomize1-
 
 resources:
 - argodeployment.yaml
+- argo2.yaml
